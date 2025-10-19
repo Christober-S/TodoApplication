@@ -25,6 +25,7 @@ This application allows users to efficiently manage tasks by creating, updating,
 * **Edit** or **delete** existing todos ✏️🗑️
 * Persistent storage using **PostgreSQL** 🗄️
 * RESTful API endpoints for managing todos 🌐
+* **Secure authentication** using JWT 🔒
 
 ---
 
@@ -32,6 +33,10 @@ This application allows users to efficiently manage tasks by creating, updating,
 
 * **Backend:** Java, Spring Boot
 * **Database:** PostgreSQL
+* **ORM:** Spring Data JPA 🗄️
+* **Lombok** for boilerplate reduction ✨
+* **Security:** Spring Security 🔒
+* **JWT** for authentication and authorization 🔑
 * **Build Tool:** Maven
 * **Version Control:** Git & GitHub
 
