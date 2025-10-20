@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Todos</title>
+    <title>Taskly | Todos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
+<body class="todo-body">
+    <main class="todo-shell">
+        <header class="todo-header">
+            <div>
+                <div class="brand-mark">Taskly Dashboard</div>
+                <p>Organize your day with clarity and intent.</p>
+            </div>
+            <div class="todo-actions">
+                <button type="button" class="ghost-btn" onclick="localStorage.removeItem('token'); window.location.href='login.html';">Log out</button>
+            </div>
+        </header>
 
-<body>
-    <div class="container">
-        <h2>Your Todos</h2>
+        <section class="todo-panel">
+            <header>
+                <h2>Today</h2>
+                <p>Track everything you need to move forward.</p>
+            </header>
 
-        <div id="todo-list" class="todo-cards">
-            <p id="empty-message">Loading your todos...</p>
-        </div>
+            <form class="add-todo" onsubmit="event.preventDefault(); addTodo();">
+                <input type="text" id="new-todo" placeholder="Add a clear, actionable task..." />
+                <button type="submit" class="primary-btn">Add task</button>
+            </form>
 
-        <div class="add-todo">
-            <input type="text" id="new-todo" placeholder="Add new todo" />
-            <button onclick="addTodo()">Add</button>
-        </div>
-    </div>
+            <div id="todo-list">
+                <p id="empty-message">Loading your todos...</p>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>

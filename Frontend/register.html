@@ -2,19 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskly | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-<div class="container">
-    <h2>Register</h2>
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="register()">Register</button>
-    <p>Already have an account? <a href="login.html">Login here</a></p>
-</div>
+<body class="auth-body">
+    <main class="auth-shell">
+        <section class="brand-panel">
+            <div class="brand-pill">Taskly Workspace</div>
+            <div>
+                <h1>Create room for focus</h1>
+                <p>Taskly keeps your plans organized with serene layouts and powerful simplicity.</p>
+            </div>
+            <div class="brand-highlights">
+                <div class="highlight-item">
+                    <span>01</span>
+                    <p>Design workflows your whole team understands instantly.</p>
+                </div>
+                <div class="highlight-item">
+                    <span>02</span>
+                    <p>Share updates effortlessly and keep everyone aligned.</p>
+                </div>
+                <div class="highlight-item">
+                    <span>03</span>
+                    <p>Reflect on wins with gentle progress indicators.</p>
+                </div>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <section class="auth-card">
+            <header>
+                <h2>Create your account</h2>
+                <p>Join Taskly to start planning with clarity.</p>
+            </header>
+
+            <form class="auth-form" onsubmit="event.preventDefault(); register();">
+                <div class="input-field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="you@example.com" required />
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a secure password" required />
+                </div>
+                <button type="submit" class="primary-btn">Sign up</button>
+            </form>
+
+            <footer class="auth-footer">
+                <p class="terms">We value your privacy and will never share your details without consent.</p>
+                <p class="swap-link">Already have an account? <a href="login.html">Log in instead</a></p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
